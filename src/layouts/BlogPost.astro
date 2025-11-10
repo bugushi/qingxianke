@@ -25,7 +25,7 @@ const { title, description, pubDate, updatedDate } = Astro.props;
 			.comments {
 				width: 960px;
 				max-width: calc(100% - 2em);
-				margin: 2em auto 4em;
+				margin: 2em auto 2em;
 			}
 			.comments iframe {
 				width: 100%;
@@ -40,7 +40,7 @@ const { title, description, pubDate, updatedDate } = Astro.props;
 				margin: 0 0 0.5em 0;
 			}
 			.date {
-				margin-bottom: 0.5em;
+				margin: 0.5em 0;
 				color: rgb(var(--gray));
 			}
 			.last-updated-on {
@@ -54,6 +54,7 @@ const { title, description, pubDate, updatedDate } = Astro.props;
 		<main>
 				<article class="prose">
 					<div class="title">
+						<h1>{title}</h1>
 						<div class="date">
 							<FormattedDate date={pubDate} />
 							{
@@ -64,7 +65,6 @@ const { title, description, pubDate, updatedDate } = Astro.props;
 								)
 							}
 						</div>
-						<h1>{title}</h1>
 						<hr />
 					</div>
 					<slot />

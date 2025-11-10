@@ -58,8 +58,19 @@ import { SITE_TITLE } from '../consts';
 		color: var(--black);
 	}
 	@media (max-width: 720px) {
-		.social-links {
-			display: none;
+		h1 {
+			font-size: 1.1em;
+		}
+		nav {
+			flex-wrap: nowrap;
+			gap: 0.25em;
+		}
+		.social-links a {
+			padding: 0.25em;
+		}
+		.social-links svg {
+			width: 24px;
+			height: 24px;
 		}
 	}
 </style>
